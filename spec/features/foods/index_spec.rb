@@ -16,6 +16,8 @@ describe "when on /foods" do
 
   it "should show a list of ten foods sorted by relevance." do
     VCR.use_cassette("foods/index", allow_playback_repeats: true) do
+      click_on "Search"
+
       within(".food-information") do
         expect(page).to have_content("NDB Number: 45094945")
         expect(page).to have_content("Name: ONE POTATO TWO POTATO, PLAIN JAYNES, SWEET POTATO CHIPS, UPC: 785654000544")
