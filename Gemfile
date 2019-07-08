@@ -12,15 +12,21 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'faraday'
+gem 'figaro'
 
 group :development, :test do
   gem 'pry'
   gem 'awesome_print'
+  gem 'webmock'
+  gem 'vcr'
+  gem 'simplecov'
+  gem 'shoulda-matchers'
+  gem 'launchy'
+  gem 'capybara'
 end
 
 group :test do
   gem 'rspec-rails'
-  gem 'capybara'
 end
 
 group :development do
