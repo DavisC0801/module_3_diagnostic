@@ -17,6 +17,7 @@ gem 'figaro'
 group :development, :test do
   gem 'pry'
   gem 'awesome_print'
+  gem 'webmock'
   gem 'vcr'
   gem 'simplecov'
   gem 'shoulda-matchers'
