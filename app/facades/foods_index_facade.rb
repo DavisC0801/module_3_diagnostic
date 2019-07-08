@@ -8,6 +8,12 @@ class FoodsIndexFacade
     food_service.total_items
   end
 
+  def foods
+    food_service.foods_data.map do |food_attributes|
+      Food.new(food_attributes)
+    end
+  end
+
   private
 
   def food_service
