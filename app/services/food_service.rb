@@ -12,5 +12,6 @@ class FoodService
     response = connection.get("?format=json&q=#{@query}&sort=r&max=10&offset=0&api_key=#{ENV["DATA_API_KEY"]}")
     data = JSON.parse(response.body, symbolize_names: true)
     data[:list][:total]
+    test
   end
 end
