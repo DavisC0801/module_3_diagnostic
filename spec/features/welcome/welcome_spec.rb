@@ -4,8 +4,8 @@ describe "welcome page" do
   describe "as a user, when I visit /" do
     describe "and I fill in the search form with sweet potatoes" do
       it "should take me to the /foods path when clicking search" do
-        VCR.use_cassette("foods/welcome") do
-            
+        VCR.use_cassette("foods/welcome", allow_playback_repeats: true) do
+
           visit root_path
 
           click_on "Search"
